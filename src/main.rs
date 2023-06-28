@@ -1,4 +1,5 @@
 #![allow(unused)]
+// use std::env;
 
 fn main() {
     // array initialized with Data Type and 
@@ -20,11 +21,17 @@ fn main() {
     println!("Array3 size - {}", array3.len());
 
 
-    let mut array4: [i32; 2] = [0, 2];
-    array4[0] = 4;
-    array4[1] = 6;
-    // assert_eq!([0, 1], &array4[0..]);
+    // declare array4 with all default values to zero
+    // after assign the values to array 
+    let mut array4: [i32; 3] = [0; 3];
+    array4[1] = 4;
+    array4[2] = 6;
 
+    // this is not working
+    // assert_eq!([1, 2], &array4[1..]);
+    // env::set_var("RUST_BRACKTRACE", "1");
+
+    // loop how prints the values of array4
     for x in &array4 {
         print!("{x}\t");
     }
