@@ -1,6 +1,25 @@
 #![allow(unused)]
 // use std::env;
 
+// ON WORKING
+// fn to change the array values
+fn change_array() {
+    let array: [f64; 2] = [0.2, 0.4];
+    println!();
+    println!("{:?}",array);
+}
+
+// fn with two ways to print the array
+fn fn_array() {
+    let array = ['l','i', 'u', 's'];
+
+    println!("{:?}", array);
+        
+    for i in &array {
+        print!("{}", i);
+    }
+}
+
 fn main() {
     // array initialized with Data Type and 
     // Expression (the size of array)
@@ -20,7 +39,6 @@ fn main() {
     println!("Array3 - {:?}", array3);
     println!("Array3 size - {}", array3.len());
 
-
     // declare array4 with all default values to zero
     // after assign the values to array 
     let mut array4: [i32; 3] = [0; 3];
@@ -33,8 +51,11 @@ fn main() {
 
     // loop how prints the values of array4
     for x in &array4 {
-        print!("{x}\t");
+        println!("{x}\t");
     }
 
+    // call the fn
+    fn_array();
 
+    change_array();
 }
